@@ -1,3 +1,4 @@
+//CREATING EVERYTHING FROM THE CIRLCE, HANDS TO THE NUMBERS THEM SELVES
 // const clock = document.querySelector('.clock');
 // const numbers = document.querySelectorAll('.number');
 
