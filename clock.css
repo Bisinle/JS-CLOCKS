@@ -1,0 +1,76 @@
+:root{
+  --color : red
+}
+
+.analog {
+  position: relative;
+  top: -30%;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3), -1px -1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.analog p{
+  position: absolute;
+  inset: 4px;
+  text-align: center;
+  transform: rotate(calc(var(--i) * (360deg / 12)));
+}
+
+.analog p span{
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color);
+  transform: rotate(calc(var(--i)*(-360deg/12)));
+
+
+}
+
+.hands::before{
+  content: "";
+  height: 12px;
+  width: 12px;
+  background-color: var(--color);
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+.hand {
+  right: 50%;
+  height: 6px;
+  background: var(--color);
+  position: absolute;
+  top: 50%;
+  border-radius: 6px;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+
+.hand.hour-hand {
+  width: 20%;
+  height: 4.2px;
+  z-index: 1;
+  background-color: black;
+
+}
+
+.hand.minute-hand {
+  width: 30%;
+  height: 2.5px;
+  z-index: 2;
+  background-color: coral;
+}
+
+.hand.second-hand {
+  width: 40%;
+  height: 1.5px;
+ background-color: green;
+}
